@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazyVsExplicitLoadingDemo.DAL", "LazyVsExplicitLoadingDemo.DAL\LazyVsExplicitLoadingDemo.DAL.csproj", "{560F329D-7644-4643-BC82-D647189FD826}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazyVsExplicitLoadingDemo.Site", "LazyVsExplicitLoadingDemo.Site\LazyVsExplicitLoadingDemo.Site.csproj", "{D14A0A18-F35A-4525-B311-6F5F53371CEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{560F329D-7644-4643-BC82-D647189FD826}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{560F329D-7644-4643-BC82-D647189FD826}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{560F329D-7644-4643-BC82-D647189FD826}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{560F329D-7644-4643-BC82-D647189FD826}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D14A0A18-F35A-4525-B311-6F5F53371CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D14A0A18-F35A-4525-B311-6F5F53371CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D14A0A18-F35A-4525-B311-6F5F53371CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D14A0A18-F35A-4525-B311-6F5F53371CEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

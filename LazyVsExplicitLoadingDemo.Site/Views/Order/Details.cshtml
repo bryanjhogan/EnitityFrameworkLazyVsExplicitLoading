@@ -1,0 +1,50 @@
+﻿@model LazyVsExplicitLoadingDemo.DAL.Entities.Order
+
+@{
+    ViewBag.Title = "Order Details";
+}
+
+<h2>Order Details</h2>
+
+<fieldset>
+    <legend>Order</legend>
+
+    <div class="display-label">
+        Name
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Customer.Firstname) @Html.DisplayFor(model => model.Customer.Lastname)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.OrderID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OrderID)
+    </div>
+
+    <div class="display-label">
+        Order Date
+    </div>
+
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OrderDate)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Comment)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Comment)
+    </div>
+
+    <div class="display-label">
+        First order item
+    </div>
+    <div class="display-field">
+        OrderItemID: @Model.OrderItems.FirstOrDefault().OrderItemID
+    </div>
+    <div class="display-field">
+        ItemDescription: @Model.OrderItems.FirstOrDefault().ItemDescription
+    </div>
+</fieldset>

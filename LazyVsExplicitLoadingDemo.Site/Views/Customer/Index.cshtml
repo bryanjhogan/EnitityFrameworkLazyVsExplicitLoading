@@ -1,0 +1,49 @@
+﻿@model IEnumerable<LazyVsExplicitLoadingDemo.DAL.Entities.Customer>
+
+@{
+    ViewBag.Title = "Customers";
+}
+
+<h2>Customers</h2>
+
+<p>
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Firstname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </th>
+        <th>Lazy Load</th>
+        <th>Order</th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    bool isLazy = item.Firstname.StartsWith("Lazy");
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Firstname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lastname)
+        </td>
+        <td>
+            @isLazy
+        </td>
+        <td>
+            @if (isLazy)
+            {
+                @Html.ActionLink("View order details using lazy loading", "DetailsLazy", "Order", new {customerID = item.CustomerID }, null)
+            }
+            else
+            {
+                @Html.ActionLink("View order details using explicit loading ", "DetailsExplicit", "Order", new {customerID = item.CustomerID }, null)
+            }
+        </td>
+    </tr>
+}
+
+</table>
